@@ -1,0 +1,374 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.39.0.0
+Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Sina USER, Beheshti, LIC=D0D7S-LTIY7-Y8XFK-ZA1NQ-A0NQI-22N53
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.39.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.21
+Assembler:       Armasm.exe V6.21
+Linker/Locator:  ArmLink.exe V6.21
+Library Manager: ArmAr.exe V6.21
+Hex Converter:   FromElf.exe V6.21
+CPU DLL:         SARMCM3.DLL V5.39.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.2.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+E:\Sina Files\Beheshti\Term6\Az Riz\HW8\main\LCD-HAL\lcd.uvprojx
+Project File Date:  05/22/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.21', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c(215): warning: function 'HAL_NVIC_SystemReset' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+  215 | {
+      | ^
+C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c(81): warning: In file included from...
+C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(29): warning: In file included from...
+./RTE/Device/STM32F401RETx\stm32f4xx_hal_conf.h(401): warning: In file included from...
+C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_cortex.h(52): warning: padding struct 'MPU_Region_InitTypeDef' with 2 bytes to align 'BaseAddress' [-Wpadded]
+   52 |   uint32_t               BaseAddress;           /*!< Specifies the base address of the region to protect.                           */
+      |                          ^
+2 warnings generated.
+compiling stm32f4xx_hal_cortex.c...
+RTE/Device/STM32F401RETx/system_stm32f4xx.c(263): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  263 |   tmp = AHBPrescTable[((RCC->CFGR & RCC_CFGR_HPRE) >> 4)];
+      |         ^~~~~~~~~~~~~
+1 warning generated.
+compiling system_stm32f4xx.c...
+LCD16x2Lib/LCD.c(2): warning: In file included from...
+LCD16x2Lib/LCD.h(12): warning: // comments are not allowed in this language [-Wcomment]
+   12 | //#include "gpio.h"
+      | ^
+LCD16x2Lib/LCD.c(3): warning: In file included from...
+LCD16x2Lib/LCD_Config.h(15): warning: // comments are not allowed in this language [-Wcomment]
+   15 | // RW is not used
+      | ^
+LCD16x2Lib/LCD.c(64): warning: no previous prototype for function 'LCD_Delay_us' [-Wmissing-prototypes]
+   64 | void  LCD_Delay_us(uint16_t  us)
+      |       ^
+LCD16x2Lib/LCD.c(64): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   64 | void  LCD_Delay_us(uint16_t  us)
+      | ^
+      | static 
+LCD16x2Lib/LCD.c(71): warning: no previous prototype for function 'LCD_Delay_ms' [-Wmissing-prototypes]
+   71 | void  LCD_Delay_ms(uint8_t  ms)
+      |       ^
+LCD16x2Lib/LCD.c(71): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   71 | void  LCD_Delay_ms(uint8_t  ms)
+      | ^
+      | static 
+LCD16x2Lib/LCD.c(220): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  220 |         LCD_Cmd(LCD_SETCGRAMADDR | (location << 3));
+      |         ~~~~~~~ ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+LCD16x2Lib/LCD.c(165): warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
+  165 |                 str++;
+      |                 ^~~
+LCD16x2Lib/LCD.c(223): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  223 |                 LCD_Data(data[i]);
+      |                          ^~~~
+LCD16x2Lib/LCD.c(263): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  263 |         LCD_Cmd(LCD_SETDDRAMADDR | (col + row_offsets[row]));
+      |                                           ^~~~~~~~~~~
+8 warnings generated.
+compiling LCD.c...
+compiling stm32f4xx_hal_pwr_ex.c...
+compiling stm32f4xx_hal.c...
+assembling startup_stm32f401xe.s...
+C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c(224): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  224 |         temp = GPIOx->AFR[position >> 3U];
+      |                ^~~~~~~~~~
+C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c(227): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  227 |         GPIOx->AFR[position >> 3U] = temp;
+      |         ^~~~~~~~~~
+C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c(243): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  243 |         temp = SYSCFG->EXTICR[position >> 2U];
+      |                ^~~~~~~~~~~~~~
+C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h(774): note: expanded from macro 'SYSCFG'
+  774 | #define SYSCFG              ((SYSCFG_TypeDef *) SYSCFG_BASE)
+      |                             ^
+C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c(246): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  246 |         SYSCFG->EXTICR[position >> 2U] = temp;
+      |         ^~~~~~~~~~~~~~
+C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h(774): note: expanded from macro 'SYSCFG'
+  774 | #define SYSCFG              ((SYSCFG_TypeDef *) SYSCFG_BASE)
+      |                             ^
+C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c(315): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  315 |       tmp = SYSCFG->EXTICR[position >> 2U];
+      |             ^~~~~~~~~~~~~~
+C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h(774): note: expanded from macro 'SYSCFG'
+  774 | #define SYSCFG              ((SYSCFG_TypeDef *) SYSCFG_BASE)
+      |                             ^
+C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c(329): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  329 |         SYSCFG->EXTICR[position >> 2U] &= ~tmp;
+      |         ^~~~~~~~~~~~~~
+C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h(774): note: expanded from macro 'SYSCFG'
+  774 | #define SYSCFG              ((SYSCFG_TypeDef *) SYSCFG_BASE)
+      |                             ^
+C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c(337): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  337 |       GPIOx->AFR[position >> 3U] &= ~(0xFU << ((uint32_t)(position & 0x07U) * 4U)) ;
+      |       ^~~~~~~~~~
+7 warnings generated.
+compiling stm32f4xx_hal_gpio.c...
+C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c(23): warning: In file included from...
+C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(29): warning: In file included from...
+./RTE/Device/STM32F401RETx\stm32f4xx_hal_conf.h(385): warning: In file included from...
+C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_rcc.h(31): warning: In file included from...
+C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h(403): warning: padding size of 'RCC_PeriphCLKInitTypeDef' with 3 bytes to alignment boundary [-Wpadded]
+  403 | typedef struct
+      |         ^
+1 warning generated.
+compiling stm32f4xx_hal_rcc_ex.c...
+C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c(379): warning: unused parameter 'Regulator' [-Wunused-parameter]
+  379 | void HAL_PWR_EnterSLEEPMode(uint32_t Regulator, uint8_t SLEEPEntry)
+      |                                      ^
+1 warning generated.
+compiling stm32f4xx_hal_pwr.c...
+main.c(3): warning: In file included from...
+./LCD16x2Lib/LCD.h(12): warning: // comments are not allowed in this language [-Wcomment]
+   12 | //#include "gpio.h"
+      | ^
+main.c(9): warning: // comments are not allowed in this language [-Wcomment]
+    9 | // char message[] = "Hello!";
+      | ^
+main.c(10): warning: no previous extern declaration for non-static variable 'message' [-Wmissing-variable-declarations]
+   10 | char message[] = "vay vay vay vay vay vay vay vay vay vay!";
+      |      ^
+main.c(10): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   10 | char message[] = "vay vay vay vay vay vay vay vay vay vay!";
+      | ^
+main.c(11): warning: no previous extern declaration for non-static variable 'messageMHz' [-Wmissing-variable-declarations]
+   11 | char messageMHz[] = " MHz"; // Adding a space for readability
+      |      ^
+main.c(11): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   11 | char messageMHz[] = " MHz"; // Adding a space for readability
+      | ^
+main.c(13): warning: no previous extern declaration for non-static variable 'BaseClock' [-Wmissing-variable-declarations]
+   13 | volatile int BaseClock = 16;
+      |              ^
+main.c(13): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   13 | volatile int BaseClock = 16;
+      |          ^
+main.c(15): warning: '_Bool' is a C99 extension [-Wc99-extensions]
+   15 | void Set_Clock(bool increase);
+      |                ^
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h(15): note: expanded from macro 'bool'
+   15 |     #define bool _Bool
+      |                  ^
+main.c(20): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   20 | void PrintSystemClock();
+      |                      ^
+      |                       void
+main.c(24): warning: no previous extern declaration for non-static variable 'Counter' [-Wmissing-variable-declarations]
+   24 | volatile unsigned char Counter = 1;
+      |                        ^
+main.c(24): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   24 | volatile unsigned char Counter = 1;
+      |          ^
+main.c(28): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+   28 |         for (volatile int i = 0; i < cycle; i++)
+      |              ^
+main.c(28): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+main.c(26): warning: no previous prototype for function 'delay' [-Wmissing-prototypes]
+   26 | void delay(int cycle)
+      |      ^
+main.c(26): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   26 | void delay(int cycle)
+      | ^
+      | static 
+main.c(62): warning: implicitly declaring library function 'memcpy' with type 'void *(void *, const void *, unsigned int)' [-Wimplicit-function-declaration]
+   62 |                                 memcpy(temp, &message[first_index], LCD_LENGTH - 1);
+      |                                 ^
+main.c(62): note: include the header <string.h> or explicitly provide a declaration for 'memcpy'
+main.c(47): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+   47 |         size_t length = sizeof(message);
+      |                ^
+main.c(60): warning: comparison of integers of different signs: 'int' and 'size_t' (aka 'unsigned int') [-Wsign-compare]
+   60 |                         while (first_index + LCD_LENGTH - 2 != length)
+      |                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^  ~~~~~~
+main.c(81): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   81 |         GPIOA->MODER &= ~(3 << 0);
+      |                      ~~ ^~~~~~~~~
+main.c(97): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   97 |         GPIOA->MODER &= ~(3 << 2);
+      |                      ~~ ^~~~~~~~~
+main.c(111): warning: no previous prototype for function 'EXTI0_IRQHandler' [-Wmissing-prototypes]
+  111 | void EXTI0_IRQHandler(void)
+      |      ^
+main.c(111): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  111 | void EXTI0_IRQHandler(void)
+      | ^
+      | static 
+main.c(121): warning: no previous prototype for function 'EXTI1_IRQHandler' [-Wmissing-prototypes]
+  121 | void EXTI1_IRQHandler(void)
+      |      ^
+main.c(121): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  121 | void EXTI1_IRQHandler(void)
+      | ^
+      | static 
+main.c(129): warning: '_Bool' is a C99 extension [-Wc99-extensions]
+  129 | void Set_Clock(bool increase)
+      |                ^
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h(15): note: expanded from macro 'bool'
+   15 |     #define bool _Bool
+      |                  ^
+main.c(133): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+  133 |         RCC->PLLCFGR = (16 << RCC_PLLCFGR_PLLM_Pos) | (BaseClock * 4 << RCC_PLLCFGR_PLLN_Pos) | (1 << RCC_PLLCFGR_PLLP_Pos);
+      |                      ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c(155): warning: implicitly declaring library function 'snprintf' with type 'int (char *, unsigned int, const char *, ...)' [-Wimplicit-function-declaration]
+  155 |         snprintf(systemClockFreqStr, sizeof(systemClockFreqStr), "%lu", systemClockFreq);
+      |         ^
+main.c(155): note: include the header <stdio.h> or explicitly provide a declaration for 'snprintf'
+main.c(155): warning: format specifies type 'unsigned long' but the argument has type 'uint32_t' (aka 'unsigned int') [-Wformat]
+  155 |         snprintf(systemClockFreqStr, sizeof(systemClockFreqStr), "%lu", systemClockFreq);
+      |                                                                   ~~~   ^~~~~~~~~~~~~~~
+      |                                                                   %u
+main.c(156): warning: implicitly declaring library function 'strncat' with type 'char *(char *, const char *, unsigned int)' [-Wimplicit-function-declaration]
+  156 |         strncat(systemClockFreqStr, messageMHz, sizeof(systemClockFreqStr) - strlen(systemClockFreqStr) - 1);
+      |         ^
+main.c(156): note: include the header <string.h> or explicitly provide a declaration for 'strncat'
+main.c(156): warning: implicitly declaring library function 'strlen' with type 'unsigned int (const char *)' [-Wimplicit-function-declaration]
+  156 |         strncat(systemClockFreqStr, messageMHz, sizeof(systemClockFreqStr) - strlen(systemClockFreqStr) - 1);
+      |                                                                              ^
+main.c(156): note: include the header <string.h> or explicitly provide a declaration for 'strlen'
+main.c(171): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+  171 |         GPIOC->MODER &= ~(3 << 26);        // PC13: input (Push button)
+      |                      ~~ ^~~~~~~~~~
+main.c(178): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+  178 | void EXTI15_10_IRQHandler()
+      |                          ^
+      |                           void
+main.c(178): warning: no previous prototype for function 'EXTI15_10_IRQHandler' [-Wmissing-prototypes]
+  178 | void EXTI15_10_IRQHandler()
+      |      ^
+main.c(178): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  178 | void EXTI15_10_IRQHandler()
+      | ^
+      | static 
+main.c(195): warning: format specifies type 'unsigned long' but the argument has type 'uint32_t' (aka 'unsigned int') [-Wformat]
+  195 |         snprintf(systemClockFreqStr, sizeof(systemClockFreqStr), "%lu", systemClockFreq);
+      |                                                                   ~~~   ^~~~~~~~~~~~~~~
+      |                                                                   %u
+main.c(187): warning: unused variable 'length' [-Wunused-variable]
+  187 |         size_t length = sizeof(message);
+      |                ^~~~~~
+main.c(210): warning: no newline at end of file [-Wnewline-eof]
+  210 | }
+      |  ^
+main.c(207): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
+  207 | void SysTick_Handler(void)
+      |      ^
+main.c(207): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  207 | void SysTick_Handler(void)
+      | ^
+      | static 
+main.c(62): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   62 |                                 memcpy(temp, &message[first_index], LCD_LENGTH - 1);
+      |                                               ^~~~~~~
+main.c(63): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   63 |                                 temp[LCD_LENGTH - 1] = '\0';
+      |                                 ^~~~
+main.c(172): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  172 |         SYSCFG->EXTICR[3] |= (2 << 4); // EXTI13: PC13
+      |         ^~~~~~~~~~~~~~
+C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h(774): note: expanded from macro 'SYSCFG'
+  774 | #define SYSCFG              ((SYSCFG_TypeDef *) SYSCFG_BASE)
+      |                             ^
+34 warnings generated.
+compiling main.c...
+C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c(719): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  719 |   SystemCoreClock = HAL_RCC_GetSysClockFreq() >> AHBPrescTable[(RCC->CFGR & RCC_CFGR_HPRE)>> RCC_CFGR_HPRE_Pos];
+      |                                                  ^~~~~~~~~~~~~
+C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c(955): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  955 |   return (HAL_RCC_GetHCLKFreq() >> APBPrescTable[(RCC->CFGR & RCC_CFGR_PPRE1)>> RCC_CFGR_PPRE1_Pos]);
+      |                                    ^~~~~~~~~~~~~
+C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c(967): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  967 |   return (HAL_RCC_GetHCLKFreq()>> APBPrescTable[(RCC->CFGR & RCC_CFGR_PPRE2)>> RCC_CFGR_PPRE2_Pos]);
+      |                                   ^~~~~~~~~~~~~
+3 warnings generated.
+compiling stm32f4xx_hal_rcc.c...
+linking...
+Program Size: Code=10928 RO-data=1008 RW-data=64 ZI-data=1648  
+FromELF: creating hex file...
+".\Objects\lcd.axf" - 0 Error(s), 57 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM::CMSIS@5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F4xx_DFP.2.17.1.pack
+                Keil::STM32F4xx_DFP@2.17.1
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: STM32Cube Framework Version: 1.0.0
+   * Component: Classic Version: 1.8.1
+   * Component: Common Version: 1.8.1
+   * Component: Cortex Version: 1.8.1
+   * Component: GPIO Version: 1.8.1
+   * Component: PWR Version: 1.8.1
+   * Component: RCC Version: 1.8.1
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F401RETx
+  ./RTE/_Target_1
+  C:/Users/USER/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+  C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ::Device:STM32Cube Framework(API)@1.0.0
+
+   * Component: ARM::CMSIS:CORE@5.6.0
+
+   * Component: Keil::Device:STM32Cube Framework:Classic@1.8.1
+      Include file:  MDK/Templates/Inc/main.h
+      Include file:  MDK/Templates_LL/Inc/main.h
+      Source file:   MDK/Templates/Src/stm32f4xx_it.c
+      Include file:  MDK/Templates/Inc/stm32f4xx_it.h
+      Source file:   MDK/Templates_LL/Src/main.c
+      Source file:   MDK/Templates/Src/stm32f4xx_hal_msp.c
+      Include file:  MDK/Templates/Inc/stm32f4xx_hal_conf.h
+      Include file:  CMSIS/Driver/Config/RTE_Device.h
+      Source file:   MDK/Templates/Src/main.c
+
+   * Component: Keil::Device:STM32Cube HAL:Common@1.8.1
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
+      Include file:  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+
+   * Component: Keil::Device:STM32Cube HAL:Cortex@1.8.1
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
+
+   * Component: Keil::Device:STM32Cube HAL:GPIO@1.8.1
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c
+
+   * Component: Keil::Device:STM32Cube HAL:PWR@1.8.1
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
+
+   * Component: Keil::Device:STM32Cube HAL:RCC@1.8.1
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
+
+   * Component: Keil::Device:Startup@2.6.3
+      Source file:   MDK/Device/Source/ARM/STM32F401xx_OPT.s
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f401xe.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

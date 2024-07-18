@@ -1,0 +1,291 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.39.0.0
+Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Sina USER, Beheshti, LIC=D0D7S-LTIY7-Y8XFK-ZA1NQ-A0NQI-22N53
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.39.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.21
+Assembler:       Armasm.exe V6.21
+Linker/Locator:  ArmLink.exe V6.21
+Library Manager: ArmAr.exe V6.21
+Hex Converter:   FromElf.exe V6.21
+CPU DLL:         SARMCM3.DLL V5.39.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.2.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+E:\Sina Files\Beheshti\Term6\Az Riz\HW9 - run\LCD-HAL\lcd.uvprojx
+Project File Date:  06/12/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.21', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+main.c(3): warning: In file included from...
+./LCD16x2Lib/LCD.h(12): warning: // comments are not allowed in this language [-Wcomment]
+   12 | //#include "gpio.h"
+      | ^
+main.c(6): warning: no previous extern declaration for non-static variable 'TIMER' [-Wmissing-variable-declarations]
+    6 | volatile int TIMER = 0;
+      |              ^
+main.c(6): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+    6 | volatile int TIMER = 0;
+      |          ^
+main.c(7): warning: no previous extern declaration for non-static variable 'BaseFreq' [-Wmissing-variable-declarations]
+    7 | volatile int BaseFreq = 3000;
+      |              ^
+main.c(7): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+    7 | volatile int BaseFreq = 3000;
+      |          ^
+main.c(8): warning: no previous extern declaration for non-static variable 'BaseFreqShow' [-Wmissing-variable-declarations]
+    8 | volatile int BaseFreqShow = 3000;
+      |              ^
+main.c(8): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+    8 | volatile int BaseFreqShow = 3000;
+      |          ^
+main.c(10): warning: no previous extern declaration for non-static variable 'select_flag' [-Wmissing-variable-declarations]
+   10 | volatile int select_flag = 0;
+      |              ^
+main.c(10): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   10 | volatile int select_flag = 0;
+      |          ^
+main.c(12): warning: no previous extern declaration for non-static variable 'Duty_Cycle' [-Wmissing-variable-declarations]
+   12 | int Duty_Cycle = 50;
+      |     ^
+main.c(12): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   12 | int Duty_Cycle = 50;
+      | ^
+main.c(13): warning: no previous extern declaration for non-static variable 'step' [-Wmissing-variable-declarations]
+   13 | int step = 10;
+      |     ^
+main.c(13): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   13 | int step = 10;
+      | ^
+main.c(15): warning: no previous prototype for function 'TIM3_IRQHandler' [-Wmissing-prototypes]
+   15 | void TIM3_IRQHandler(void)
+      |      ^
+main.c(15): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   15 | void TIM3_IRQHandler(void)
+      | ^
+      | static 
+main.c(26): warning: // comments are not allowed in this language [-Wcomment]
+   26 |         char timerStr[20]; // Buffer to hold the resulting string
+      |                            ^
+main.c(27): warning: implicitly declaring library function 'snprintf' with type 'int (char *, unsigned int, const char *, ...)' [-Wimplicit-function-declaration]
+   27 |         snprintf(timerStr, sizeof(timerStr), "time: %d", TIMER);
+      |         ^
+main.c(27): note: include the header <stdio.h> or explicitly provide a declaration for 'snprintf'
+main.c(24): warning: no previous prototype for function 'show_clock' [-Wmissing-prototypes]
+   24 | void show_clock(void)
+      |      ^
+main.c(24): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   24 | void show_clock(void)
+      | ^
+      | static 
+main.c(37): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   37 |         TIM2->ARR = BaseFreq - 1;                       // Auto-reload value
+      |                   ~ ~~~~~~~~~^~~
+main.c(33): warning: no previous prototype for function 'Configure_TIM2' [-Wmissing-prototypes]
+   33 | void Configure_TIM2(void)
+      |      ^
+main.c(33): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   33 | void Configure_TIM2(void)
+      | ^
+      | static 
+main.c(44): warning: no previous prototype for function 'TIM2_IRQHandler' [-Wmissing-prototypes]
+   44 | void TIM2_IRQHandler(void)
+      |      ^
+main.c(44): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   44 | void TIM2_IRQHandler(void)
+      | ^
+      | static 
+main.c(52): warning: no previous prototype for function 'Configure_ADC' [-Wmissing-prototypes]
+   52 | void Configure_ADC(void)
+      |      ^
+main.c(52): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   52 | void Configure_ADC(void)
+      | ^
+      | static 
+main.c(62): warning: '_Bool' is a C99 extension [-Wc99-extensions]
+   62 | void Update_Freq(bool up)
+      |                  ^
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h(15): note: expanded from macro 'bool'
+   15 |     #define bool _Bool
+      |                  ^
+main.c(74): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   74 |         TIM2->ARR = BaseFreq - 1; // Auto-reload value
+      |                   ~ ~~~~~~~~~^~~
+main.c(62): warning: no previous prototype for function 'Update_Freq' [-Wmissing-prototypes]
+   62 | void Update_Freq(bool up)
+      |      ^
+main.c(62): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   62 | void Update_Freq(bool up)
+      | ^
+      | static 
+main.c(77): warning: no previous prototype for function 'show_freq' [-Wmissing-prototypes]
+   77 | void show_freq(void)
+      |      ^
+main.c(77): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   77 | void show_freq(void)
+      | ^
+      | static 
+main.c(110): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+  110 |                 TIM2->CCR1 = (BaseFreq * Duty_Cycle) / 100;
+      |                            ~ ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+main.c(112): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+  112 |                 for (int i = 0; i < 100000; i++)
+      |                      ^
+main.c(112): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+main.c(123): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+  123 |                 TIM2->CCR1 = (BaseFreq * Duty_Cycle) / 100;
+      |                            ~ ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+main.c(124): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+  124 |                 for (int i = 0; i < 100000; i++)
+      |                      ^
+main.c(124): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+main.c(132): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+  132 |                 for (int i = 0; i < 100000; i++)
+      |                      ^
+main.c(132): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+main.c(140): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+  140 |                 for (int i = 0; i < 100000; i++)
+      |                      ^
+main.c(140): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+main.c(149): warning: implicitly declaring library function 'sprintf' with type 'int (char *, const char *, ...)' [-Wimplicit-function-declaration]
+  149 |         sprintf(s, "duty: %d", Duty_Cycle);
+      |         ^
+main.c(149): note: include the header <stdio.h> or explicitly provide a declaration for 'sprintf'
+main.c(92): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+   92 |         unsigned int ADC_Result = ADC1->DR & 0x0FFF;
+      |                      ^
+main.c(86): warning: no previous prototype for function 'ADC_CONTROLLER' [-Wmissing-prototypes]
+   86 | void ADC_CONTROLLER(void)
+      |      ^
+main.c(86): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   86 | void ADC_CONTROLLER(void)
+      | ^
+      | static 
+main.c(163): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+  163 |         TIM2->ARR = BaseFreq - 1; // Auto-reload value
+      |                   ~ ~~~~~~~~~^~~
+main.c(164): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+  164 |         TIM2->CCMR1 &= ~(3 << 0); // CC1S: CC1 channel output
+      |                     ~~ ^~~~~~~~~
+main.c(165): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+  165 |         TIM2->CCMR1 &= ~(7 << 4); // Clear OC1M field
+      |                     ~~ ^~~~~~~~~
+main.c(171): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+  171 |         TIM2->CCR1 = (BaseFreq * Duty_Cycle) / 100;
+      |                    ~ ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+main.c(154): warning: no previous prototype for function 'Configure_PWM' [-Wmissing-prototypes]
+  154 | void Configure_PWM(void)
+      |      ^
+main.c(154): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  154 | void Configure_PWM(void)
+      | ^
+      | static 
+main.c(189): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+  189 |         GPIOA->MODER &= ~(3 << 10); // clear PA5 pin mode
+      |                      ~~ ^~~~~~~~~~
+main.c(211): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+  211 |         char s[20];
+      |              ^
+main.c(221): warning: 'return' will never be executed [-Wunreachable-code-return]
+  221 |         return 0;
+      |                ^
+main.c(227): warning: no newline at end of file [-Wnewline-eof]
+  227 | }
+      |  ^
+main.c(224): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
+  224 | void SysTick_Handler(void)
+      |      ^
+main.c(224): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  224 | void SysTick_Handler(void)
+      | ^
+      | static 
+42 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=11648 RO-data=1036 RW-data=28 ZI-data=1660  
+FromELF: creating hex file...
+".\Objects\lab9-run-hex.axf" - 0 Error(s), 42 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM::CMSIS@5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F4xx_DFP.2.17.1.pack
+                Keil::STM32F4xx_DFP@2.17.1
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: STM32Cube Framework Version: 1.0.0
+   * Component: Classic Version: 1.8.1
+   * Component: Common Version: 1.8.1
+   * Component: Cortex Version: 1.8.1
+   * Component: GPIO Version: 1.8.1
+   * Component: PWR Version: 1.8.1
+   * Component: RCC Version: 1.8.1
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F401RETx
+  ./RTE/_Target_1
+  C:/Users/USER/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+  C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ::Device:STM32Cube Framework(API)@1.0.0
+
+   * Component: ARM::CMSIS:CORE@5.6.0
+
+   * Component: Keil::Device:STM32Cube Framework:Classic@1.8.1
+      Source file:   MDK/Templates/Src/stm32f4xx_hal_msp.c
+      Include file:  MDK/Templates/Inc/stm32f4xx_it.h
+      Source file:   MDK/Templates/Src/stm32f4xx_it.c
+      Include file:  MDK/Templates/Inc/main.h
+      Source file:   MDK/Templates/Src/main.c
+      Include file:  MDK/Templates_LL/Inc/main.h
+      Source file:   MDK/Templates_LL/Src/main.c
+      Include file:  CMSIS/Driver/Config/RTE_Device.h
+      Include file:  MDK/Templates/Inc/stm32f4xx_hal_conf.h
+
+   * Component: Keil::Device:STM32Cube HAL:Common@1.8.1
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
+      Include file:  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+
+   * Component: Keil::Device:STM32Cube HAL:Cortex@1.8.1
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
+
+   * Component: Keil::Device:STM32Cube HAL:GPIO@1.8.1
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c
+
+   * Component: Keil::Device:STM32Cube HAL:PWR@1.8.1
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c
+
+   * Component: Keil::Device:STM32Cube HAL:RCC@1.8.1
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
+
+   * Component: Keil::Device:Startup@2.6.3
+      Source file:   MDK/Device/Source/ARM/STM32F401xx_OPT.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f401xe.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

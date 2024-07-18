@@ -1,0 +1,205 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.39.0.0
+Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Sina USER, Beheshti, LIC=D0D7S-LTIY7-Y8XFK-ZA1NQ-A0NQI-22N53
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.39.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.21
+Assembler:       Armasm.exe V6.21
+Linker/Locator:  ArmLink.exe V6.21
+Library Manager: ArmAr.exe V6.21
+Hex Converter:   FromElf.exe V6.21
+CPU DLL:         SARMCM3.DLL V5.39.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.2.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+E:\Sina Files\Beheshti\Term6\Az Riz\HW7\Emtiazi\emt-keil.uvprojx
+Project File Date:  05/17/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.21', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+RTE/Device/STM32F401RETx/system_stm32f4xx.c(263): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  263 |   tmp = AHBPrescTable[((RCC->CFGR & RCC_CFGR_HPRE) >> 4)];
+      |         ^~~~~~~~~~~~~
+1 warning generated.
+compiling system_stm32f4xx.c...
+assembling startup_stm32f401xe.s...
+lab7_emtiazi.C(6): warning: no previous extern declaration for non-static variable 'seg' [-Wmissing-variable-declarations]
+    6 | int seg[10] = {0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x6f};
+      |     ^
+lab7_emtiazi.C(6): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+    6 | int seg[10] = {0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x6f};
+      | ^
+lab7_emtiazi.C(7): warning: no previous prototype for function 'delay' [-Wmissing-prototypes]
+    7 | void delay(void)
+      |      ^
+lab7_emtiazi.C(7): note: declare 'static' if the function is not intended to be used outside of this translation unit
+    7 | void delay(void)
+      | ^
+      | static 
+lab7_emtiazi.C(13): warning: no previous prototype for function 'delay_inside' [-Wmissing-prototypes]
+   13 | void delay_inside(void)
+      |      ^
+lab7_emtiazi.C(13): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   13 | void delay_inside(void)
+      | ^
+      | static 
+lab7_emtiazi.C(19): warning: no previous prototype for function 'prime' [-Wmissing-prototypes]
+   19 | int prime(int number)
+      |     ^
+lab7_emtiazi.C(19): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   19 | int prime(int number)
+      | ^
+      | static 
+lab7_emtiazi.C(40): warning: no previous prototype for function 'palindrome' [-Wmissing-prototypes]
+   40 | int palindrome(int number)
+      |     ^
+lab7_emtiazi.C(40): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   40 | int palindrome(int number)
+      | ^
+      | static 
+lab7_emtiazi.C(66): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   66 |             GPIOC->ODR = ~seg[0];
+      |                        ~ ^~~~~~~
+lab7_emtiazi.C(70): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   70 |             GPIOC->ODR = ~seg[1];
+      |                        ~ ^~~~~~~
+lab7_emtiazi.C(74): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   74 |             GPIOC->ODR = ~seg[2];
+      |                        ~ ^~~~~~~
+lab7_emtiazi.C(78): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   78 |             GPIOC->ODR = ~seg[3];
+      |                        ~ ^~~~~~~
+lab7_emtiazi.C(82): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   82 |             GPIOC->ODR = ~seg[4];
+      |                        ~ ^~~~~~~
+lab7_emtiazi.C(86): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   86 |             GPIOC->ODR = ~seg[5];
+      |                        ~ ^~~~~~~
+lab7_emtiazi.C(90): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   90 |             GPIOC->ODR = ~seg[6];
+      |                        ~ ^~~~~~~
+lab7_emtiazi.C(94): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   94 |             GPIOC->ODR = ~seg[7];
+      |                        ~ ^~~~~~~
+lab7_emtiazi.C(98): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   98 |             GPIOC->ODR = ~seg[8];
+      |                        ~ ^~~~~~~
+lab7_emtiazi.C(102): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+  102 |             GPIOC->ODR = ~seg[9];
+      |                        ~ ^~~~~~~
+lab7_emtiazi.C(106): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+  106 |         GPIOC->ODR = ~0;
+      |                    ~ ^~
+lab7_emtiazi.C(56): warning: no previous prototype for function 'show_number' [-Wmissing-prototypes]
+   56 | void show_number(int number)
+      |      ^
+lab7_emtiazi.C(56): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   56 | void show_number(int number)
+      | ^
+      | static 
+lab7_emtiazi.C(113): warning: use of an empty initializer is a C23 extension [-Wc23-extensions]
+  113 |     int prime_pali[20] = {};
+      |                          ^
+lab7_emtiazi.C(123): warning: declaration shadows a local variable [-Wshadow]
+  123 |         for (int i = 0; i < 20; i++)
+      |                  ^
+lab7_emtiazi.C(120): note: previous declaration is here
+  120 |         int i = 0;
+      |             ^
+lab7_emtiazi.C(160): warning: no newline at end of file [-Wnewline-eof]
+  160 | }
+      |  ^
+lab7_emtiazi.C(157): warning: code will never be executed [-Wunreachable-code]
+  157 |         for (;;)
+      |         ^~~~~~~~
+  158 |             ;
+      |             ~
+lab7_emtiazi.C(70): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   70 |             GPIOC->ODR = ~seg[1];
+      |                           ^~~
+lab7_emtiazi.C(74): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   74 |             GPIOC->ODR = ~seg[2];
+      |                           ^~~
+lab7_emtiazi.C(78): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   78 |             GPIOC->ODR = ~seg[3];
+      |                           ^~~
+lab7_emtiazi.C(82): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   82 |             GPIOC->ODR = ~seg[4];
+      |                           ^~~
+lab7_emtiazi.C(86): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   86 |             GPIOC->ODR = ~seg[5];
+      |                           ^~~
+lab7_emtiazi.C(90): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   90 |             GPIOC->ODR = ~seg[6];
+      |                           ^~~
+lab7_emtiazi.C(94): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   94 |             GPIOC->ODR = ~seg[7];
+      |                           ^~~
+lab7_emtiazi.C(98): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   98 |             GPIOC->ODR = ~seg[8];
+      |                           ^~~
+lab7_emtiazi.C(102): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  102 |             GPIOC->ODR = ~seg[9];
+      |                           ^~~
+lab7_emtiazi.C(130): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  130 |                     prime_pali[i] = num;
+      |                     ^~~~~~~~~~
+lab7_emtiazi.C(137): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  137 |             int number = prime_pali[i];
+      |                          ^~~~~~~~~~
+lab7_emtiazi.C(143): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  143 |                     number = prime_pali[--i];
+      |                              ^~~~~~~~~~
+lab7_emtiazi.C(151): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  151 |                     number = prime_pali[++i];
+      |                              ^~~~~~~~~~
+34 warnings generated.
+compiling lab7_emtiazi.C...
+linking...
+Program Size: Code=1504 RO-data=436 RW-data=40 ZI-data=1632  
+FromELF: creating hex file...
+".\Objects\emt-keil.axf" - 0 Error(s), 35 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM::CMSIS@5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F4xx_DFP.2.17.1.pack
+                Keil::STM32F4xx_DFP@2.17.1
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Users/USER/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/USER/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@5.6.0
+
+   * Component: Keil::Device:Startup@2.6.3
+      Source file:   MDK/Device/Source/ARM/STM32F401xx_OPT.s
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f401xe.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>
